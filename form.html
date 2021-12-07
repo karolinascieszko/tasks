@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadanie 2</title>
+    <link rel="stylesheet" href="./css/form.css" />
+  </head>
+  <body>
+    <p>
+      <a class="main-menu-back" href="index.html">Powrót do głównego menu</a>
+    </p>
+    <form id="form" class="form">
+      <div class="form-container">
+        <label class="form-label">
+          Tytuł książki:
+          <input
+            id="title"
+            class="book-title"
+            type="text"
+            minlength="1"
+            placeholder="Wprowadź minimum 1 znak..."
+          />
+        </label>
+        <label class="form-label">
+          Autor książki:
+          <input
+            id="book-author"
+            class="book-author"
+            type="text"
+            minlength="3"
+            placeholder="Wprowadź minimum 3 znaki..."
+          />
+        </label>
+        <label class="form-label">
+          Priorytet przeczytania:
+          <input
+            class="priority"
+            id="priority"
+            type="number"
+            min="1"
+            max="5"
+            placeholder="Wprowadź liczbę z zakresu 1-5..."
+          />
+        </label>
+      </div>
+      <label class="form-label">Lista kategorii:</label>
+      <select name="category-list" id="category-list" class="category-list">
+        <option
+          value=""
+          selected="true"
+          disabled="disabled"
+          class="category-option"
+        >
+          Wybierz kategorię
+        </option>
+        <option value="Thriller" class="category-option">Thriller</option>
+        <option value="Fantasy" class="category-option">Fantasy</option>
+        <option value="Reportaż" class="category-option">Reportaż</option>
+      </select>
+
+      <button class="btn-submit" type="submit">Wyślij</button>
+    </form>
+    <table class="books-table">
+      <thead class="books-table-header">
+        <tr>
+          <th class="table-head">Tytuł</th>
+          <th class="table-head">Autor</th>
+          <th class="table-head">Priorytet</th>
+          <th class="table-head">Kategoria</th>
+        </tr>
+      </thead>
+      <tbody class="books-table-body"></tbody>
+    </table>
+
+    <script src="./js/form.js" type="module"></script>
+  </body>
+</html>
