@@ -12,7 +12,6 @@
   text-align: center;
   font-size: 40px;
   font-weight: 600;
-  /* margin-bottom: 10px; */
 }
 
 .book-title,
@@ -22,13 +21,12 @@
   height: 60px;
   margin-bottom: 40px;
   margin-top: 10px;
-  /* outline: none; */
 }
+
 .book-title,
 .book-author,
 .priority::placeholder {
   font-size: 20px;
-  /* margin-left: 20px; */
 }
 
 .book-title:focus,
@@ -69,21 +67,17 @@
   margin-right: auto;
   margin-left: auto;
   margin-top: 90px;
-  /* border: solid 2px black;  */
 }
 
 .books-table-header {
   font-size: 40px;
-  /* text-align: center; */
 }
 
 .table-head {
   padding-right: 40px;
-  /* border-bottom: solid 2px black; */
   background-color: #f5f5dc;
   width: 200px;
   text-align: center;
-  /* border-right: solid 2px black; */
 }
 
 .booksTableElement {
@@ -95,28 +89,3 @@
 .main-menu-back {
   font-size: 25px;
 }
-/* .book-title,
-.book-author,
-.priority:focus {
-  outline: none;
-  border-color: dodgerblue;
-} */
-
-/* .book-author {
-  width: 350px;
-  height: 40px;
-  margin-bottom: 20px;
-  margin-top: 10px;
-}
-
-.priority {
-  width: 350px;
-  height: 40px;
-  margin-bottom: 20px;
-  margin-top: 10px;
-} */
-
-/* .form-container {
-  display: flex;
-  flex-direction: column;
-} */

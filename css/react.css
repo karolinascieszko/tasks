@@ -1,0 +1,20 @@
+.main-menu-back {
+  font-size: 25px;
+}
+
+.react-link {
+  font-size: 50px;
+  text-align: center;
+  display: block;
+  margin-top: 100px;
+}
+
+.title-app {
+  font-size: 40px;
+  font-family: "Fira Sans", cursive;
+  text-transform: uppercase;
+  color: #191970;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 150px;
+}

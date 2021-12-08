@@ -20,32 +20,14 @@ const getBooks = (key) => {
     const serializedState = localStorage.getItem(key);
     return serializedState === null ? undefined : JSON.parse(serializedState);
   } catch (error) {
-    // console.log(error);
     console.log(error);
   }
 };
 
 let books =
-  getBooks(LOCALSTORAGE_KEY) === undefined ? [] : getBooks(LOCALSTORAGE_KEY);
-console.log(books);
+  getBooks(LOCALSTORAGE_KEY) !== undefined ? getBooks(LOCALSTORAGE_KEY) : [];
 
-const addBook = (e) => {
-  books.push({
-    bookTitle: `${form.elements[0].value}`,
-    bookAuthor: `${form.elements[1].value}`,
-    bookPriority: `${form.elements[2].value}`,
-    bookCategory: `${form.elements[3].value}`,
-  });
-
-  saveBooks(LOCALSTORAGE_KEY, books);
-  render();
-  form.reset();
-};
-
-const render = () => {
-  console.log(books);
-
-  //   booksTable.innerHTML = "";
+const renderBooks = () => {
   books.forEach(({ bookTitle, bookAuthor, bookPriority, bookCategory }) => {
     booksTable.innerHTML += `
         <tr class='booksTableRow'>
@@ -54,6 +36,19 @@ const render = () => {
       <td class='booksTableElement'>${bookPriority}</td>
       <td class='booksTableElement'>${bookCategory}</td></tr>`;
   });
+};
+
+const addBooksToArray = (e) => {
+  books.push({
+    bookTitle: `${form.elements[0].value}`,
+    bookAuthor: `${form.elements[1].value}`,
+    bookPriority: `${form.elements[2].value}`,
+    bookCategory: `${form.elements[3].value}`,
+  });
+
+  saveBooks(LOCALSTORAGE_KEY, books);
+  renderBooks();
+  form.reset();
 };
 
 const checkValidation = (e) => {
@@ -68,10 +63,10 @@ const checkValidation = (e) => {
     );
     return;
   } else {
-    addBook();
+    addBooksToArray();
   }
 };
 
-render();
+renderBooks();
 
 btnSubmit.addEventListener("click", checkValidation);
